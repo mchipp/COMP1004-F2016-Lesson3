@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace COMP1004_F2016_Lesson3
 {
-    public partial class Form1 : Form
+    public partial class SplashForm : Form
     {
-        public Form1()
+        public SplashForm()
         {
             InitializeComponent();
+        }
+
+        private void SplashFormTimer_Tick(object sender, EventArgs e)
+        {
+            SplashFormTimer.Enabled = false;
+
+            StartForm startForm = new StartForm();
+            startForm.Show();
+            this.Hide();
         }
     }
 }
